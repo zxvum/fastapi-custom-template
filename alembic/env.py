@@ -24,14 +24,6 @@ from app.logger import logger
 # imports below are needed for autogeneration
 from app.apps.chat import models as chat_models
 
-section = config.config_ini_section
-config.set_section_option(section, "DB_DRIVER", settings.DB_DRIVER)
-config.set_section_option(section, "DB_HOST", settings.DB_HOST)
-config.set_section_option(section, "DB_PORT", str(settings.DB_PORT))
-config.set_section_option(section, "DB_USER", settings.DB_USER)
-config.set_section_option(section, "DB_PASSWORD", settings.DB_PASSWORD)
-config.set_section_option(section, "DB_DATABASE", settings.DB_DATABASE)
-
 # async_fallback=true is used, because alembic works with sync drivers
 logger.info(f"db_url: {str(settings.DB_DSN)+'?async_fallback=true'}")
 target_metadata = metadata

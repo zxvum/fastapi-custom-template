@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["zxvum <timvash90@gmail.com>"]
 readme = "README.md"
-packages = [{include = "fastapi_custom_template"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -17,6 +16,9 @@ termcolor = "^2.3.0"
 sqlalchemy = "^2.0.20"
 alembic = "^1.11.3"
 asyncpg = "^0.28.0"
+greenlet = "^2.0.2"
+websockets = "^11.0.3"
+fastapi-users = {extras = ["sqlalchemy"], version = "^12.1.1"}
 
 
 [build-system]

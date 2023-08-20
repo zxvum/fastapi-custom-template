@@ -17,6 +17,8 @@ class Settings(BaseSettings):
     DB_MAX_OVERFLOW: int = 0
     DB_ECHO: bool = False
 
+    SECRET_AUTH: str = "SECRET"
+
     @property
     def DB_DSN(self) -> URL:
         return URL.create(
